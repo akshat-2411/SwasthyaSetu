@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rounded icon background for dashboard cards -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@color/primary_surface" />
+    <size
+        android:width="@dimen/icon_bg_size"
+        android:height="@dimen/icon_bg_size" />
+</shape>

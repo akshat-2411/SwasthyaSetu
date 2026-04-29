@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SwasthyaSetu</string>
+    <string name="places_web_api_key">AIzaSyDhEUs_0zZcaVp3QTLTSzVaOli0Zz1cITo</string>
+    <string name="app_tagline">Your Health, Our Priority</string>
+    <string name="greeting_text">Namaste</string>
+    <string name="greeting_format">Namaste, %1$s</string>
+    <string name="greeting_subtitle">How are you feeling today?</string>
+    <string name="section_quick_actions">Quick Actions</string>
+    <string name="action_ai_health_chat">AI Health Chat</string>
+    <string name="action_ai_health_chat_desc">Talk to our AI assistant about your health queries</string>
+    <string name="action_find_hospitals">Find Hospitals</string>
+    <string name="action_find_hospitals_desc">Locate nearby hospitals and clinics</string>
+    <string name="action_vaccination_tracker">Vaccination Tracker</string>
+    <string name="action_vaccination_tracker_desc">Track your vaccination schedule and records</string>
+    <string name="action_first_aid_guide">First Aid Guide</string>
+    <string name="action_first_aid_guide_desc">Quick first aid instructions for emergencies</string>
+    <string name="action_symptom_checker">Symptom Checker</string>
+    <string name="action_symptom_checker_desc">Check symptoms &amp; get AI-powered guidance</string>
+    <string name="sos_button_text">🚨 SOS Emergency</string>
+    <string name="sos_button_content_description">Emergency SOS Button</string>
+    <string name="sos_dialog_title">Emergency SOS</string>
+    <string name="sos_dialog_message">Are you sure you want to trigger an emergency SOS alert? This will attempt to contact emergency services.</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_history">History</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_retry">Retry</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_back">Back</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_no_internet">No internet connection. Please check your network.</string>
+    <string name="error_timeout">Request timed out. Please try again.</string>
+    <string name="error_location_permission">Location permission is required to find nearby hospitals.</string>
+    <string name="cd_app_logo">SwasthyaSetu App Logo</string>
+    <string name="cd_icon_ai_chat">AI Health Chat Icon</string>
+    <string name="cd_icon_hospital">Find Hospitals Icon</string>
+    <string name="cd_icon_vaccine">Vaccination Tracker Icon</string>
+    <string name="cd_icon_first_aid">First Aid Guide Icon</string>
+    <string name="cd_icon_symptom">Symptom Checker Icon</string>
+    <string name="cd_icon_sos">Emergency SOS Icon</string>
+    <string name="chat_subtitle">Powered by AI</string>
+    <string name="chat_input_hint">Type your health query…</string>
+    <string name="chat_send_cd">Send message</string>
+    <string name="chat_typing">SwasthyaSetu AI is typing…</string>
+    <string name="chat_ai_label">🤖 SwasthyaSetu AI</string>
+    <string name="chat_welcome_message">Namaste! 🙏 I am your SwasthyaSetu health assistant. Ask me anything about your health — symptoms, first aid, medications, or general wellness.\n\n⚕️ Disclaimer: I am an AI assistant, not a doctor. Please consult a qualified healthcare professional for medical advice.</string>
+    <string name="chat_error_no_response">Sorry, I could not generate a response. Please try again.</string>
+    <string name="chat_error_generic">Sorry, something went wrong: %1$s</string>
+    <string name="map_subtitle">Nearby within 10 km</string>
+    <string name="map_searching">Searching for nearby hospitals…</string>
+    <string name="map_fetching_location">Getting your location…</string>
+    <string name="map_you_are_here">You are here</string>
+    <string name="map_hospital_label">Hospital</string>
+    <string name="map_hospitals_found">%1$d hospitals found nearby</string>
+    <string name="map_no_hospitals">No hospitals found within 10 km</string>
+    <string name="map_permission_denied">Location permission denied. Cannot find nearby hospitals.</string>
+    <string name="map_location_unavailable">Could not determine your location. Please try again.</string>
+    <string name="map_location_error">Error getting location. Please check GPS settings.</string>
+    <string name="map_search_error">Could not search for hospitals. Please check your connection.</string>
+    <string name="map_navigate_hint">Tap to navigate to %1$s</string>
+    <string name="map_my_location_cd">Center on my location</string>
+    <string name="sos_loading_contact">Loading emergency contact…</string>
+    <string name="sos_no_contact">No emergency contact saved. Please add one in Firestore.</string>
+    <string name="sos_sms_sent">🚨 SOS sent to %1$s</string>
+    <string name="sos_sms_failed">Failed to send SOS: %1$s</string>
+    <string name="login_error_title">Sign-in Failed</string>
+    <string name="login_error_cancelled">You cancelled the Google Sign-In process. Please try again when you are ready.</string>
+    <string name="sos_sms_permission_needed">SMS permission is required to send an SOS alert.</string>
+    <string name="sos_location_needed">Location permission is required to include your GPS position.</string>
+    <string name="sos_getting_location">Getting your location for SOS…</string>
+    <string name="sos_long_press_hint">Long-press the SOS button to send emergency alert</string>
+    <string name="splash_from_india">from the heart of India 🇮🇳</string>
+    <string name="login_welcome">Welcome to SwasthyaSetu</string>
+    <string name="login_subtitle">Sign in to access your health dashboard</string>
+    <string name="login_google_btn">Sign in with Google</string>
+    <string name="login_welcome_user">Welcome, %1$s! 🙏</string>
+    <string name="login_failed">Sign-in failed: %1$s</string>
+    <string name="action_reminders">Pill Timers</string>
+    <string name="action_reminders_desc">Manage your medications</string>
+    <string name="login_terms">By signing in, you agree to our Terms of Service and Privacy Policy</string>
+    <string name="default_web_client_id">640339995436-7dt80187i0rcpfr64khmq52m406oenq6.apps.googleusercontent.com</string>
+
+    <!-- Symptom Checker -->
+    <string name="symptom_title">Symptom Checker</string>
+    <string name="symptom_subtitle">Select your symptoms</string>
+    <string name="symptom_instruction">Tap the symptoms you are experiencing, then press Check Now for AI-powered guidance.</string>
+    <string name="symptom_fever">Fever</string>
+    <string name="symptom_cough">Cough</string>
+    <string name="symptom_body_pain">Body Pain</string>
+    <string name="symptom_headache">Headache</string>
+    <string name="symptom_nausea">Nausea</string>
+    <string name="symptom_fatigue">Fatigue</string>
+    <string name="symptom_sore_throat">Sore Throat</string>
+    <string name="symptom_cold">Cold</string>
+    <string name="symptom_check_now">Check Now</string>
+    <string name="symptom_check_now_count">Check Now (%1$d)</string>
+    <string name="symptom_none_selected">Please select at least one symptom</string>
+    <string name="symptom_analyzing">Analyzing…</string>
+    <string name="symptom_ai_analyzing">🤖 Asking AI for analysis…</string>
+    <string name="cd_symptom_icon">Symptom icon</string>
+
+    <!-- Diagnosis Result Screen -->
+    <string name="result_title">Diagnosis Result</string>
+    <string name="result_homecare_title">🏠 Home Care Tips</string>
+    <string name="result_consult_ai">Ask AI</string>
+    <string name="result_go_home">Go Home</string>
+    <string name="result_find_doctor">🏥  Find Nearest Doctor</string>
+    <string name="result_disclaimer">This is an AI-generated suggestion. Please consult a professional for a formal diagnosis.</string>
+    <string name="result_powered_by_ai">✨ Powered by AI</string>
+
+    <!-- ==================== Health Tip Card ==================== -->
+    <string name="health_tip_label">💡 Tip</string>
+    <string name="health_tip_title">Daily Health Tip</string>
+    <string name="health_tip_content">Drink at least 8 glasses of water daily to stay hydrated and improve concentration.</string>
+    <string name="health_tip_share_cd">Share this tip</string>
+    <string name="health_tip_share_prefix">💡 SwasthyaSetu Health Tip:\n\n</string>
+    <string name="health_tip_loading">Loading today\'s tip…</string>
+    <string name="health_tip_default">Stay Healthy!</string>
+    <string name="health_tip_default_content">Eat balanced meals, stay hydrated, and get plenty of rest.</string>
+
+    <!-- ==================== Profile Screen ==================== -->
+    <string name="profile_heading">My Profile</string>
+    <string name="profile_subtitle">Keep your health info up to date</string>
+    <string name="profile_avatar_cd">Profile avatar</string>
+    <string name="profile_section_personal">Personal Details</string>
+    <string name="profile_section_medical">Critical Medical Info</string>
+    <string name="profile_hint_full_name">Full Name</string>
+    <string name="profile_hint_age">Age</string>
+    <string name="profile_hint_gender">Gender</string>
+    <string name="profile_hint_blood_group">Blood Group</string>
+    <string name="profile_hint_allergies">Allergies (if any)</string>
+    <string name="profile_hint_emergency_contact">Emergency Contact Number</string>
+    <string name="profile_btn_save">Save Profile</string>
+    <string name="profile_btn_saving">Saving…</string>
+    <string name="profile_saved_toast">Profile saved successfully ✅</string>
+    <string name="profile_error_name_required">Name is required</string>
+    <string name="profile_error_age_invalid">Enter a valid age (1–120)</string>
+    <string name="profile_error_gender_required">Please select a gender</string>
+    <string name="profile_error_blood_required">Please select a blood group</string>
+    <string name="profile_error_phone_invalid">Enter a valid phone number (min 10 digits)</string>
+    <string name="profile_title">My Profile</string>
+
+    <!-- ==================== Medical Mini-Card ==================== -->
+    <string name="mini_card_setup_prompt">⚠️ Complete your Medical Profile</string>
+    <string name="mini_card_sos_cd">SOS Contact</string>
+
+    <!-- ==================== Language Selection ==================== -->
+    <string name="language_button_cd">Change Language</string>
+    <string name="language_dialog_title">Choose Language</string>
+    <string name="language_english">English</string>
+    <string name="language_hindi">हिंदी</string>
+
+    <!-- ==================== Alert Detail Activity ==================== -->
+    <string name="alert_detail_title">Health Alert</string>
+    <string name="alert_section_what_is_happening">What is happening?</string>
+    <string name="alert_section_symptoms">Symptoms to watch for</string>
+    <string name="alert_section_precautions">Precautionary Steps</string>
+    <string name="alert_btn_helpline">📱 Call Helpline (104)</string>
+    <string name="alert_loading">Fetching latest government advisory…</string>
+    <string name="alert_error">Could not fetch advisory at this time.</string>
+
+    <!-- ==================== Map Legend ==================== -->
+    <string name="map_legend_title">Outbreak Heatmap</string>
+    <string name="map_legend_high">High Risk</string>
+    <string name="map_legend_moderate">Moderate Risk</string>
+
+    <!-- ==================== Vaccination Tracker ==================== -->
+    <string name="vaccine_tracker_title">Vaccination Tracker</string>
+    <string name="vaccine_filter_upcoming">Upcoming</string>
+    <string name="vaccine_filter_completed">Completed</string>
+    <string name="vaccine_mark_done">Mark as Done</string>
+    <string name="vaccine_due_date">Due: %s</string>
+    <string name="vaccine_status_updated">Vaccination status updated successfully!</string>
+    <string name="vaccine_add_demo">Add Demo Vaccine</string>
+
+    <!-- ==================== First Aid Guide ==================== -->
+    <string name="first_aid_title">First Aid Guide</string>
+    <string name="first_aid_search_hint">Search emergencies (e.g. Snake Bite)</string>
+    <string name="first_aid_what_to_do">What to do:</string>
+    <string name="first_aid_call_ambulance">Call Ambulance</string>
+    <string name="first_aid_no_results">No matching guides found.</string>
+
+    <!-- ==================== History Timeline ==================== -->
+    <string name="history_title">Activity History</string>
+    <string name="history_filter_all">All Activity</string>
+    <string name="history_filter_chat">Chat Queries</string>
+    <string name="history_filter_vaccine">Vaccinations</string>
+    <string name="history_filter_symptom">Symptom Checks</string>
+    <string name="history_no_events">No activity recorded yet.</string>
+    <string name="menu_history_cd">View Activity History</string>
+
+    <!-- ==================== Vaccine Details Bottom Sheet ==================== -->
+    <string name="vaccine_sheet_title">Vaccination Details</string>
+    <string name="vaccine_btn_download">Download Certificate</string>
+    <string name="vaccine_downloading">Preparing Certificate PDF…</string>
+
+    <!-- ==================== History AI Integration ==================== -->
+    <string name="history_btn_ai_summary">Health Summary</string>
+    <string name="history_ai_loading">Analyzing your recent health data…</string>
+    <string name="history_ai_error">Unable to generate AI summary. Please check your connection.</string>
+
+    <!-- Add Reminder -->
+    <string name="reminder_title">New Reminder</string>
+    <string name="reminder_medicine_name">Medicine Name</string>
+    <string name="reminder_dosage">Dosage (e.g., 1 Tablet)</string>
+    <string name="reminder_select_time">Select Time</string>
+    <string name="reminder_freq_once">Once a day</string>
+    <string name="reminder_freq_twice">Twice a day</string>
+    <string name="reminder_freq_thrice">Thrice a day</string>
+    <string name="reminder_btn_save">Save Reminder</string>
+    <string name="reminder_error_empty">Please fill all fields and select a time.</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_reminders_name">Medication Reminders</string>
+    <string name="notif_channel_reminders_desc">Alerts for your scheduled medications.</string>
+    <string name="notif_action_take_now">Take Now</string>
+
+</resources>

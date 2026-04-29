@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "640339995436",
+    "firebase_url": "https://swasthyasetu-c9ddf-default-rtdb.firebaseio.com",
+    "project_id": "swasthyasetu-c9ddf",
+    "storage_bucket": "swasthyasetu-c9ddf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640339995436:android:98cac547a88e0e6849da89",
+        "android_client_info": {
+          "package_name": "com.example.swasthyasetu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640339995436-bcmot7ejq5c758k42u4nli4uck886c75.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.swasthyasetu",
+            "certificate_hash": "869863a2a0eeda355d7f5997abbd6e5170eac399"
+          }
+        },
+        {
+          "client_id": "640339995436-7dt80187i0rcpfr64khmq52m406oenq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3jDQVilzMi91cryYzpNIE0jBrlBhBnnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "640339995436-7dt80187i0rcpfr64khmq52m406oenq6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

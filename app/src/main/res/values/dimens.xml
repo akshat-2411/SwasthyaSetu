@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_margin_horizontal">16dp</dimen>
+    <dimen name="screen_margin_vertical">16dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_icon_size">48dp</dimen>
+    <dimen name="card_spacing">12dp</dimen>
+    <dimen name="sos_button_corner_radius">28dp</dimen>
+    <dimen name="sos_button_elevation">8dp</dimen>
+    <dimen name="sos_button_padding_vertical">16dp</dimen>
+    <dimen name="sos_button_margin_top">24dp</dimen>
+    <dimen name="sos_button_margin_bottom">32dp</dimen>
+    <dimen name="greeting_margin_bottom">8dp</dimen>
+    <dimen name="section_header_margin_top">24dp</dimen>
+    <dimen name="section_header_margin_bottom">16dp</dimen>
+    <dimen name="icon_bg_size">64dp</dimen>
+    <dimen name="icon_bg_corner_radius">32dp</dimen>
+
+    <!-- Symptom Card -->
+    <dimen name="symptom_default_stroke">1dp</dimen>
+    <dimen name="symptom_selected_stroke">3dp</dimen>
+    <dimen name="symptom_selected_elevation">6dp</dimen>
+
+    <!-- Health Tip Alert -->
+    <dimen name="alert_stroke_width">2dp</dimen>
+</resources>

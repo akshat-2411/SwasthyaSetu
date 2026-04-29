@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".view.ChatActivity">
+
+    <!-- ============================================================ -->
+    <!--  TOP APP BAR                                                  -->
+    <!-- ============================================================ -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        app:navigationIconTint="@color/white"
+        app:title="@string/action_ai_health_chat"
+        app:titleTextColor="@color/white"
+        app:subtitle="@string/chat_subtitle"
+        app:subtitleTextColor="@color/primary_light" />
+
+    <!-- ============================================================ -->
+    <!--  CHAT MESSAGES RecyclerView                                    -->
+    <!-- ============================================================ -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChatMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="12dp"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_chat_ai" />
+
+    <!-- ============================================================ -->
+    <!--  TYPING INDICATOR                                             -->
+    <!-- ============================================================ -->
+    <TextView
+        android:id="@+id/tvTypingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/chat_typing"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!-- ============================================================ -->
+    <!--  BOTTOM INPUT BAR                                             -->
+    <!-- ============================================================ -->
+    <LinearLayout
+        android:id="@+id/inputBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <!-- 📎 Upload Button -->
+        <ImageButton
+            android:id="@+id/btnUpload"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_send_button"
+            android:padding="10dp"
+            android:src="@drawable/ic_attach"
+            android:contentDescription="Upload"
+            app:tint="@color/white"/>
+
+        <!-- 📷 Camera Button -->
+        <ImageButton
+            android:id="@+id/btnCamera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_send_button"
+            android:padding="10dp"
+            android:src="@drawable/ic_camera"
+            android:contentDescription="Camera"
+            app:tint="@color/white"/>
+
+        <EditText
+            android:id="@+id/etChatInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_chat_input"
+            android:hint="@string/chat_input_hint"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:minHeight="48dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"/>
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_send_button"
+            android:padding="12dp"
+            android:src="@drawable/ic_send"
+            app:tint="@color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

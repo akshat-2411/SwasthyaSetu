@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewProfile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    tools:context=".view.ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <!-- ============================================================ -->
+        <!--  HEADER with Gradient Background                              -->
+        <!-- ============================================================ -->
+        <LinearLayout
+            android:id="@+id/headerProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_gradient"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="48dp"
+            android:paddingBottom="32dp">
+
+            <ImageView
+                android:id="@+id/iv_profile_avatar"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_icon_circle"
+                android:contentDescription="@string/profile_avatar_cd"
+                android:padding="12dp"
+                android:src="@drawable/ic_profile"
+                app:tint="@color/primary" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_profile_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_heading"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_profile_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/profile_subtitle"
+                    android:textColor="@color/primary_light"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ============================================================ -->
+        <!--  SECTION 1: Personal Details                                  -->
+        <!-- ============================================================ -->
+        <TextView
+            android:id="@+id/tv_section_personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="@dimen/section_header_margin_top"
+            android:layout_marginBottom="12dp"
+            android:text="@string/profile_section_personal"
+            android:textAppearance="@style/TextAppearance.SwasthyaSetu.SectionHeader" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_personal_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:cardBackgroundColor="@color/surface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
+
+                <!-- Full Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_full_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profile_hint_full_name"
+                    app:startIconDrawable="@drawable/ic_profile"
+                    app:startIconTint="@color/primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Age -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_user_age"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/profile_hint_age">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_user_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Gender (Dropdown) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_gender"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/profile_hint_gender">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/dropdown_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:cursorVisible="false"
+                        android:focusable="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ============================================================ -->
+        <!--  SECTION 2: Critical Medical Info                             -->
+        <!-- ============================================================ -->
+        <TextView
+            android:id="@+id/tv_section_medical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="@dimen/section_header_margin_top"
+            android:layout_marginBottom="12dp"
+            android:text="@string/profile_section_medical"
+            android:textAppearance="@style/TextAppearance.SwasthyaSetu.SectionHeader" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_medical_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:cardBackgroundColor="@color/surface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
+
+                <!-- Blood Group (Dropdown) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_blood_group"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profile_hint_blood_group">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/dropdown_blood_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:cursorVisible="false"
+                        android:focusable="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Allergies (Multi-line) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_allergies"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/profile_hint_allergies"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="300">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_allergies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:gravity="top"
+                        android:minLines="3"
+                        android:maxLength="300" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Emergency Contact (Phone) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_emergency_contact"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/profile_hint_emergency_contact"
+                    app:startIconDrawable="@drawable/ic_emergency"
+                    app:startIconTint="@color/accent_emergency">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_emergency_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ============================================================ -->
+        <!--  SAVE PROFILE BUTTON                                          -->
+        <!-- ============================================================ -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="@dimen/section_header_margin_top"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="@string/profile_btn_save"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="@dimen/card_corner_radius"
+            app:icon="@drawable/ic_check"
+            app:iconGravity="textStart"
+            app:iconSize="20dp"
+            app:rippleColor="@color/ripple_primary" />
+
+        <!-- ============================================================ -->
+        <!--  LOGOUT BUTTON                                                -->
+        <!-- ============================================================ -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_logout"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="16dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="Logout"
+            android:textColor="#D32F2F"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:strokeColor="#D32F2F"
+            app:cornerRadius="@dimen/card_corner_radius"
+            app:icon="@drawable/ic_logout"
+            app:iconTint="#D32F2F"
+            app:iconGravity="textStart"
+            app:iconSize="20dp"
+            app:rippleColor="#FCE4E4" />
+
+    </LinearLayout>
+
+</ScrollView>

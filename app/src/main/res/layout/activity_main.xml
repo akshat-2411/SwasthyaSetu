@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    tools:context=".view.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ============================================================ -->
+        <!--  DYNAMIC ALERT SECTION                                        -->
+        <!-- ============================================================ -->
+        <FrameLayout
+            android:id="@+id/alertSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/warningCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFEBEE"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/ivAlertIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Warning Icon"
+                    android:src="@drawable/ic_warning"
+                    app:tint="#D32F2F" />
+
+                <TextView
+                    android:id="@+id/tvAlertTicker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:freezesText="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="#D32F2F"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="Warning content goes here" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- ============================================================ -->
+        <!--  GREETING HEADER with Gradient Background                     -->
+        <!-- ============================================================ -->
+        <RelativeLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_gradient"
+            android:paddingStart="24dp"
+            android:paddingTop="48dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="32dp">
+
+            <!-- Language Globe Button (top-right) -->
+            <ImageButton
+                android:id="@+id/btnLanguage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/language_button_cd"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_language" />
+
+            <!-- Activity History Button -->
+            <ImageButton
+                android:id="@+id/btnHistory"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@id/btnLanguage"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/menu_history_cd"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_history" />
+
+            <!-- Greeting Text -->
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/btnLanguage"
+                android:textAppearance="@style/TextAppearance.SwasthyaSetu.Greeting"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                tools:text="Namaste, User" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvGreeting"
+                android:layout_marginTop="4dp"
+                android:text="@string/greeting_subtitle"
+                android:textAppearance="@style/TextAppearance.SwasthyaSetu.Subtitle"
+                android:textColor="@color/primary_light"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <!-- ============================================================ -->
+        <!--  MEDICAL MINI-CARD (Profile Summary / Setup Prompt)           -->
+        <!-- ============================================================ -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMedicalMini"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:rippleColor="@color/ripple_primary">
+
+            <!-- ─── Filled state: user info row ─── -->
+            <LinearLayout
+                android:id="@+id/layoutMiniProfileFilled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                android:visibility="gone">
+
+                <!-- Profile avatar icon -->
+                <ImageView
+                    android:id="@+id/iv_mini_avatar"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_icon_circle"
+                    android:contentDescription="@string/profile_avatar_cd"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_profile"
+                    app:tint="@color/primary" />
+
+                <!-- Name -->
+                <TextView
+                    android:id="@+id/tv_mini_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="Akshat Sharma" />
+
+                <!-- Blood Group badge -->
+                <TextView
+                    android:id="@+id/tv_mini_blood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_icon_circle"
+                    android:paddingStart="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/accent_emergency"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:text="B+" />
+
+                <!-- SOS contact icon -->
+                <ImageView
+                    android:id="@+id/iv_mini_sos"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="@string/mini_card_sos_cd"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_emergency"
+                    app:tint="@color/accent_emergency" />
+            </LinearLayout>
+
+            <!-- ─── Empty state: setup prompt ─── -->
+            <LinearLayout
+                android:id="@+id/layoutMiniProfileEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/profile_avatar_cd"
+                    android:src="@drawable/ic_warning"
+                    app:tint="@color/warning_amber" />
+
+                <TextView
+                    android:id="@+id/tv_mini_prompt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:text="@string/mini_card_setup_prompt"
+                    android:textColor="@color/accent_emergency"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/btn_continue"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="@color/accent_emergency" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ============================================================ -->
+        <!--  DAILY HEALTH TIP CARD                                        -->
+        <!-- ============================================================ -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardHealthTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            app:cardBackgroundColor="#E0F2F1"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="4dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Tip Icon (lightbulb) -->
+                <ImageView
+                    android:id="@+id/ivTipIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_icon_circle"
+                    android:contentDescription="@string/health_tip_label"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_lightbulb"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/primary" />
+
+                <!-- Title: 'Daily Health Tip' -->
+                <TextView
+                    android:id="@+id/tvHealthTipTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/health_tip_title"
+                    android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardTitle"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/ivTipIcon"
+                    app:layout_constraintEnd_toStartOf="@id/btnShareTip"
+                    app:layout_constraintStart_toEndOf="@id/ivTipIcon"
+                    app:layout_constraintTop_toTopOf="@id/ivTipIcon" />
+
+                <!-- Share Button (top-right corner) -->
+                <ImageButton
+                    android:id="@+id/btnShareTip"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/health_tip_share_cd"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_share"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Tip Content -->
+                <TextView
+                    android:id="@+id/tvHealthTipContent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/health_tip_loading"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivTipIcon" />
+
+                <!-- Shimmer Loading Placeholder -->
+                <LinearLayout
+                    android:id="@+id/shimmerPlaceholder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivTipIcon">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@drawable/shimmer_placeholder" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="14dp"
+                        android:background="@drawable/shimmer_placeholder" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ============================================================ -->
+        <!--  QUICK ACTIONS Section Header                                 -->
+        <!-- ============================================================ -->
+        <TextView
+            android:id="@+id/tvSectionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginTop="@dimen/section_header_margin_top"
+            android:layout_marginBottom="@dimen/section_header_margin_bottom"
+            android:text="@string/section_quick_actions"
+            android:textAppearance="@style/TextAppearance.SwasthyaSetu.SectionHeader" />
+
+        <!-- ============================================================ -->
+        <!--  2×2 GRID of Quick Action Cards                               -->
+        <!-- ============================================================ -->
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridQuickActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_margin_horizontal"
+            android:layout_marginEnd="@dimen/screen_margin_horizontal"
+            app:columnCount="2"
+            app:rowCount="3"
+            app:useDefaultMargins="false">
+
+            <!-- ── Card 1: AI Health Chat ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAiChat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_spacing"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/card_bg_chat"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:rippleColor="@color/ripple_primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <ImageView
+                        android:id="@+id/ivAiChat"
+                        android:layout_width="@dimen/card_icon_size"
+                        android:layout_height="@dimen/card_icon_size"
+                        android:background="@drawable/bg_icon_circle"
+                        android:contentDescription="@string/cd_icon_ai_chat"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_ai_chat"
+                        app:tint="@color/card_icon_tint_chat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="@string/action_ai_health_chat"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardTitle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="@string/action_ai_health_chat_desc"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardDescription" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ── Card 2: Find Hospitals ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFindHospitals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_spacing"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/card_bg_hospital"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:rippleColor="@color/ripple_primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <ImageView
+                        android:id="@+id/ivHospital"
+                        android:layout_width="@dimen/card_icon_size"
+                        android:layout_height="@dimen/card_icon_size"
+                        android:background="@drawable/bg_icon_circle"
+                        android:contentDescription="@string/cd_icon_hospital"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_hospital"
+                        app:tint="@color/card_icon_tint_hospital" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="@string/action_find_hospitals"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardTitle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="@string/action_find_hospitals_desc"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardDescription" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ── Card 3: Vaccination Tracker ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardVaccination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_spacing"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/card_bg_vaccine"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:rippleColor="@color/ripple_primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <ImageView
+                        android:id="@+id/ivVaccine"
+                        android:layout_width="@dimen/card_icon_size"
+                        android:layout_height="@dimen/card_icon_size"
+                        android:background="@drawable/bg_icon_circle"
+                        android:contentDescription="@string/cd_icon_vaccine"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_vaccine"
+                        app:tint="@color/card_icon_tint_vaccine" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="@string/action_vaccination_tracker"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardTitle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="@string/action_vaccination_tracker_desc"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardDescription" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ── Card 4: First Aid Guide ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFirstAid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_spacing"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/card_bg_firstaid"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:rippleColor="@color/ripple_primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <ImageView
+                        android:id="@+id/ivFirstAid"
+                        android:layout_width="@dimen/card_icon_size"
+                        android:layout_height="@dimen/card_icon_size"
+                        android:background="@drawable/bg_icon_circle"
+                        android:contentDescription="@string/cd_icon_first_aid"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_first_aid"
+                        app:tint="@color/card_icon_tint_firstaid" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="@string/action_first_aid_guide"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardTitle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="@string/action_first_aid_guide_desc"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardDescription" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ── Card 5: Symptom Checker ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSymptomChecker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_spacing"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/card_bg_symptom"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:rippleColor="@color/ripple_primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <ImageView
+                        android:id="@+id/ivSymptomCheck"
+                        android:layout_width="@dimen/card_icon_size"
+                        android:layout_height="@dimen/card_icon_size"
+                        android:background="@drawable/bg_icon_circle"
+                        android:contentDescription="@string/cd_icon_symptom"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_symptom_check"
+                        app:tint="@color/card_icon_tint_symptom" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="@string/action_symptom_checker"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardTitle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="@string/action_symptom_checker_desc"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardDescription" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ── Card 6: Pill Reminders ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardReminders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_spacing"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/card_bg_reminders"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:rippleColor="@color/ripple_primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <ImageView
+                        android:id="@+id/ivReminders"
+                        android:layout_width="@dimen/card_icon_size"
+                        android:layout_height="@dimen/card_icon_size"
+                        android:background="@drawable/bg_icon_circle"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_medicine"
+                        app:tint="@color/card_icon_tint_reminders" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="@string/action_reminders"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardTitle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="@string/action_reminders_desc"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardDescription" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ── Card 7: Medicine Scanner ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardScanner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/card_spacing"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/card_bg_chat"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                app:rippleColor="@color/ripple_primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <ImageView
+                        android:layout_width="@dimen/card_icon_size"
+                        android:layout_height="@dimen/card_icon_size"
+                        android:background="@drawable/bg_icon_circle"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_camera"
+                        app:tint="@color/card_icon_tint_chat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="Scan Medicine"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardTitle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="Scan and get medicine info"
+                        android:textAppearance="@style/TextAppearance.SwasthyaSetu.CardDescription" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <!-- ============================================================ -->
+        <!--  SOS EMERGENCY BUTTON                                         -->
+        <!-- ============================================================ -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSosEmergency"
+            style="@style/Widget.SwasthyaSetu.SOSButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/sos_button_margin_top"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="@dimen/sos_button_margin_bottom"
+            android:contentDescription="@string/sos_button_content_description"
+            android:text="@string/sos_button_text"
+            app:icon="@drawable/ic_emergency"
+            app:iconGravity="textStart"
+            app:iconSize="24dp" />
+
+    </LinearLayout>
+
+</ScrollView>

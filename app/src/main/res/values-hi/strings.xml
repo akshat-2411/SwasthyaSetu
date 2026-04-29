@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ==================== App Info ==================== -->
+    <string name="app_name">स्वास्थ्यसेतु</string>
+    <string name="app_tagline">आपका स्वास्थ्य, हमारी प्राथमिकता</string>
+
+    <!-- ==================== Dashboard / Greeting ==================== -->
+    <string name="greeting_text">नमस्ते, उपयोगकर्ता</string>
+    <string name="greeting_format">नमस्ते, %s</string>
+    <string name="greeting_subtitle">आज आप कैसा महसूस कर रहे हैं?</string>
+    <string name="section_quick_actions">त्वरित कार्य</string>
+
+    <!-- ==================== Health Tip Card ==================== -->
+    <string name="health_tip_label">💡 सुझाव</string>
+    <string name="health_tip_title">दैनिक स्वास्थ्य सुझाव</string>
+    <string name="health_tip_content">हाइड्रेटेड रहने और एकाग्रता बढ़ाने के लिए रोजाना कम से कम 8 गिलास पानी पिएं।</string>
+    <string name="health_tip_share_cd">यह सुझाव साझा करें</string>
+    <string name="health_tip_share_prefix">💡 स्वास्थ्यसेतु स्वास्थ्य सुझाव:\n\n</string>
+    <string name="health_tip_loading">आज का सुझाव लोड हो रहा है…</string>
+    <string name="health_tip_default">स्वस्थ रहें!</string>
+    <string name="health_tip_default_content">संतुलित आहार लें, हाइड्रेटेड रहें, और भरपूर आराम करें।</string>
+
+    <!-- ==================== Quick Action Cards ==================== -->
+    <string name="action_ai_health_chat">AI स्वास्थ्य चैट</string>
+    <string name="action_ai_health_chat_desc">अपने स्वास्थ्य प्रश्नों के बारे में हमारे AI सहायक से बात करें</string>
+    <string name="action_find_hospitals">अस्पताल खोजें</string>
+    <string name="action_find_hospitals_desc">आस-पास के अस्पतालों और क्लीनिकों का पता लगाएं</string>
+    <string name="action_vaccination_tracker">टीकाकरण ट्रैकर</string>
+    <string name="action_vaccination_tracker_desc">अपने टीकाकरण कार्यक्रम और रिकॉर्ड ट्रैक करें</string>
+    <string name="action_first_aid_guide">प्राथमिक चिकित्सा गाइड</string>
+    <string name="action_first_aid_guide_desc">आपातकालीन स्थितियों के लिए त्वरित प्राथमिक चिकित्सा निर्देश</string>
+    <string name="action_symptom_checker">लक्षण जांच</string>
+    <string name="action_symptom_checker_desc">लक्षण जांचें और AI-संचालित मार्गदर्शन प्राप्त करें</string>
+
+    <string name="action_reminders">गोली टाइमर</string>
+    <string name="action_reminders_desc">अपनी दवाओं का प्रबंधन करें</string>
+
+    <!-- ==================== SOS / Emergency ==================== -->
+    <string name="sos_button_text">🚨 आपातकालीन SOS</string>
+    <string name="sos_button_content_description">आपातकालीन SOS बटन</string>
+    <string name="sos_dialog_title">आपातकालीन SOS</string>
+    <string name="sos_dialog_message">क्या आप वाकई आपातकालीन SOS अलर्ट भेजना चाहते हैं? यह आपातकालीन सेवाओं से संपर्क करने का प्रयास करेगा।</string>
+
+    <string name="login_error_title">साइन-इन विफल</string>
+    <string name="login_error_cancelled">आपने Google साइन-इन प्रक्रिया रद्द कर दी है। कृपया तैयार होने पर पुनः प्रयास करें।</string>
+
+    <!-- ==================== Navigation ==================== -->
+    <string name="nav_home">होम</string>
+    <string name="nav_profile">प्रोफ़ाइल</string>
+    <string name="nav_settings">सेटिंग्स</string>
+    <string name="nav_history">इतिहास</string>
+
+    <!-- ==================== Common Buttons ==================== -->
+    <string name="btn_ok">ठीक है</string>
+    <string name="btn_cancel">रद्द करें</string>
+    <string name="btn_yes">हाँ</string>
+    <string name="btn_no">नहीं</string>
+    <string name="btn_submit">जमा करें</string>
+    <string name="btn_retry">पुनः प्रयास करें</string>
+    <string name="btn_continue">जारी रखें</string>
+    <string name="btn_back">वापस</string>
+
+    <!-- ==================== Error Messages ==================== -->
+    <string name="error_generic">कुछ गलत हो गया। कृपया पुनः प्रयास करें।</string>
+    <string name="error_no_internet">इंटरनेट कनेक्शन नहीं है। कृपया अपना नेटवर्क जांचें।</string>
+    <string name="error_timeout">अनुरोध का समय समाप्त हो गया। कृपया पुनः प्रयास करें।</string>
+    <string name="error_location_permission">आस-पास के अस्पतालों को खोजने के लिए स्थान अनुमति आवश्यक है।</string>
+
+    <!-- ==================== Content Descriptions (Accessibility) ==================== -->
+    <string name="cd_app_logo">स्वास्थ्यसेतु ऐप लोगो</string>
+    <string name="cd_icon_ai_chat">AI स्वास्थ्य चैट आइकन</string>
+    <string name="cd_icon_hospital">अस्पताल खोजें आइकन</string>
+    <string name="cd_icon_vaccine">टीकाकरण ट्रैकर आइकन</string>
+    <string name="cd_icon_first_aid">प्राथमिक चिकित्सा गाइड आइकन</string>
+    <string name="cd_icon_symptom">लक्षण जांच आइकन</string>
+    <string name="cd_icon_sos">आपातकालीन SOS आइकन</string>
+
+    <!-- ==================== AI Health Chat ==================== -->
+    <string name="chat_subtitle">AI द्वारा संचालित</string>
+    <string name="chat_input_hint">अपना स्वास्थ्य प्रश्न टाइप करें…</string>
+    <string name="chat_send_cd">संदेश भेजें</string>
+    <string name="chat_typing">स्वास्थ्यसेतु AI टाइप कर रहा है…</string>
+    <string name="chat_ai_label">🤖 स्वास्थ्यसेतु AI</string>
+    <string name="chat_welcome_message">नमस्ते! 🙏 मैं आपका स्वास्थ्यसेतु स्वास्थ्य सहायक हूं। अपने स्वास्थ्य के बारे में कुछ भी पूछें — लक्षण, प्राथमिक चिकित्सा, दवाइयां, या सामान्य स्वास्थ्य।\n\n⚕️ अस्वीकरण: मैं एक AI सहायक हूं, डॉक्टर नहीं। कृपया चिकित्सा सलाह के लिए किसी योग्य स्वास्थ्य पेशेवर से परामर्श करें।</string>
+    <string name="chat_error_no_response">क्षमा करें, मैं जवाब नहीं दे सका। कृपया पुनः प्रयास करें।</string>
+    <string name="chat_error_generic">क्षमा करें, कुछ गलत हो गया: %1$s</string>
+
+    <!-- ==================== Find Hospitals / Map ==================== -->
+    <string name="map_subtitle">10 किमी के भीतर</string>
+    <string name="map_searching">आस-पास के अस्पतालों की खोज हो रही है…</string>
+    <string name="map_fetching_location">आपका स्थान प्राप्त हो रहा है…</string>
+    <string name="map_you_are_here">आप यहां हैं</string>
+    <string name="map_hospital_label">अस्पताल</string>
+    <string name="map_hospitals_found">%1$d अस्पताल पास में मिले</string>
+    <string name="map_no_hospitals">10 किमी के भीतर कोई अस्पताल नहीं मिला</string>
+    <string name="map_permission_denied">स्थान अनुमति अस्वीकार कर दी गई। आस-पास के अस्पताल नहीं खोज सकते।</string>
+    <string name="map_location_unavailable">आपका स्थान निर्धारित नहीं हो सका। कृपया पुनः प्रयास करें।</string>
+    <string name="map_location_error">स्थान प्राप्त करने में त्रुटि। कृपया GPS सेटिंग्स जांचें।</string>
+    <string name="map_search_error">अस्पतालों की खोज नहीं हो सकी। कृपया अपना कनेक्शन जांचें।</string>
+    <string name="map_navigate_hint">%1$s पर नेविगेट करने के लिए टैप करें</string>
+    <string name="map_my_location_cd">मेरे स्थान पर केंद्रित करें</string>
+
+    <!-- ==================== SOS Emergency (SMS) ==================== -->
+    <string name="sos_loading_contact">आपातकालीन संपर्क लोड हो रहा है…</string>
+    <string name="sos_no_contact">कोई आपातकालीन संपर्क सहेजा नहीं गया। कृपया Firestore में एक जोड़ें।</string>
+    <string name="sos_sms_sent">🚨 SOS %1$s को भेजा गया</string>
+    <string name="sos_sms_failed">SOS भेजने में विफल: %1$s</string>
+    <string name="sos_sms_permission_needed">SOS अलर्ट भेजने के लिए SMS अनुमति आवश्यक है।</string>
+    <string name="sos_location_needed">अपनी GPS स्थिति शामिल करने के लिए स्थान अनुमति आवश्यक है।</string>
+    <string name="sos_getting_location">SOS के लिए आपका स्थान प्राप्त हो रहा है…</string>
+    <string name="sos_long_press_hint">आपातकालीन अलर्ट भेजने के लिए SOS बटन को देर तक दबाएं</string>
+
+    <!-- Splash Screen -->
+    <string name="splash_from_india">भारत के दिल से 🇮🇳</string>
+
+    <!-- Login Screen -->
+    <string name="login_welcome">स्वास्थ्यसेतु में आपका स्वागत है</string>
+    <string name="login_subtitle">अपने स्वास्थ्य डैशबोर्ड तक पहुंचने के लिए साइन इन करें</string>
+    <string name="login_google_btn">Google से साइन इन करें</string>
+    <string name="login_welcome_user">स्वागत है, %1$s! 🙏</string>
+    <string name="login_failed">साइन-इन विफल: %1$s</string>
+    <string name="login_terms">साइन इन करके, आप हमारी सेवा की शर्तों और गोपनीयता नीति से सहमत होते हैं</string>
+
+    <!-- ==================== Symptom Checker ==================== -->
+    <string name="symptom_title">लक्षण जांच</string>
+    <string name="symptom_subtitle">अपने लक्षण चुनें</string>
+    <string name="symptom_instruction">आप जो लक्षण अनुभव कर रहे हैं उन पर टैप करें, फिर AI-संचालित मार्गदर्शन के लिए अभी जांचें दबाएं।</string>
+    <string name="symptom_fever">बुखार</string>
+    <string name="symptom_cough">खांसी</string>
+    <string name="symptom_body_pain">शरीर दर्द</string>
+    <string name="symptom_headache">सिरदर्द</string>
+    <string name="symptom_nausea">मतली</string>
+    <string name="symptom_fatigue">थकान</string>
+    <string name="symptom_sore_throat">गले में खराश</string>
+    <string name="symptom_cold">सर्दी</string>
+    <string name="symptom_check_now">अभी जांचें</string>
+    <string name="symptom_check_now_count">अभी जांचें (%1$d)</string>
+    <string name="symptom_none_selected">कृपया कम से कम एक लक्षण चुनें</string>
+    <string name="symptom_analyzing">विश्लेषण हो रहा है…</string>
+    <string name="symptom_ai_analyzing">🤖 AI से विश्लेषण के लिए पूछ रहा है…</string>
+    <string name="cd_symptom_icon">लक्षण आइकन</string>
+
+    <!-- ==================== Diagnosis Result Screen ==================== -->
+    <string name="result_title">निदान परिणाम</string>
+    <string name="result_homecare_title">🏠 घरेलू देखभाल सुझाव</string>
+    <string name="result_consult_ai">AI से पूछें</string>
+    <string name="result_go_home">होम पर जाएं</string>
+    <string name="result_find_doctor">🏥  निकटतम डॉक्टर खोजें</string>
+    <string name="result_disclaimer">यह AI-जनित सुझाव है। कृपया औपचारिक निदान के लिए किसी पेशेवर से परामर्श करें।</string>
+    <string name="result_powered_by_ai">✨ AI द्वारा संचालित</string>
+
+    <!-- ==================== Profile Screen ==================== -->
+    <string name="profile_heading">मेरी प्रोफ़ाइल</string>
+    <string name="profile_subtitle">अपनी स्वास्थ्य जानकारी अपडेट रखें</string>
+    <string name="profile_avatar_cd">प्रोफ़ाइल अवतार</string>
+    <string name="profile_section_personal">व्यक्तिगत विवरण</string>
+    <string name="profile_section_medical">महत्वपूर्ण चिकित्सा जानकारी</string>
+    <string name="profile_hint_full_name">पूरा नाम</string>
+    <string name="profile_hint_age">उम्र</string>
+    <string name="profile_hint_gender">लिंग</string>
+    <string name="profile_hint_blood_group">रक्त समूह</string>
+    <string name="profile_hint_allergies">एलर्जी (यदि कोई हो)</string>
+    <string name="profile_hint_emergency_contact">आपातकालीन संपर्क नंबर</string>
+    <string name="profile_btn_save">प्रोफ़ाइल सहेजें</string>
+    <string name="profile_btn_saving">सहेजा जा रहा है…</string>
+    <string name="profile_saved_toast">प्रोफ़ाइल सफलतापूर्वक सहेजी गई ✅</string>
+    <string name="profile_error_name_required">नाम आवश्यक है</string>
+    <string name="profile_error_age_invalid">वैध उम्र दर्ज करें (1–120)</string>
+    <string name="profile_error_gender_required">कृपया लिंग चुनें</string>
+    <string name="profile_error_blood_required">कृपया रक्त समूह चुनें</string>
+    <string name="profile_error_phone_invalid">वैध फ़ोन नंबर दर्ज करें (न्यूनतम 10 अंक)</string>
+    <string name="profile_title">मेरी प्रोफ़ाइल</string>
+
+    <!-- ==================== Medical Mini-Card ==================== -->
+    <string name="mini_card_setup_prompt">⚠️ अपनी मेडिकल प्रोफ़ाइल पूरी करें</string>
+    <string name="mini_card_sos_cd">SOS संपर्क</string>
+
+    <!-- ==================== Language Selection ==================== -->
+    <string name="language_button_cd">भाषा बदलें</string>
+    <string name="language_dialog_title">भाषा चुनें</string>
+    <string name="language_english">English</string>
+    <string name="language_hindi">हिंदी</string>
+
+    <!-- ==================== Alert Detail Activity ==================== -->
+    <string name="alert_detail_title">स्वास्थ्य अलर्ट</string>
+    <string name="alert_section_what_is_happening">क्या हो रहा है?</string>
+    <string name="alert_section_symptoms">ध्‍यान देने योग्य लक्षण</string>
+    <string name="alert_section_precautions">एहतियाती कदम</string>
+    <string name="alert_btn_helpline">📱 हेल्पलाइन पर कॉल करें (104)</string>
+    <string name="alert_loading">नवीनतम सरकारी एडवाइजरी प्राप्त की जा रही है…</string>
+    <string name="alert_error">इस समय एडवाइजरी प्राप्त नहीं की जा सकी।</string>
+
+    <!-- ==================== Map Legend ==================== -->
+    <string name="map_legend_title">प्रकोप हीटमैप</string>
+    <string name="map_legend_high">उच्च जोखिम</string>
+    <string name="map_legend_moderate">मध्यम जोखिम</string>
+
+    <!-- ==================== Vaccination Tracker ==================== -->
+    <string name="vaccine_tracker_title">टीकाकरण ट्रैकर</string>
+    <string name="vaccine_filter_upcoming">आगामी</string>
+    <string name="vaccine_filter_completed">पूर्ण</string>
+    <string name="vaccine_mark_done">पूर्ण के रूप में चिह्नित करें</string>
+    <string name="vaccine_due_date">देय: %s</string>
+    <string name="vaccine_status_updated">टीकाकरण की स्थिति सफलतापूर्वक अपडेट की गई!</string>
+    <string name="vaccine_add_demo">डेमो वैक्सीन जोड़ें</string>
+
+    <!-- ==================== First Aid Guide ==================== -->
+    <string name="first_aid_title">प्राथमिक चिकित्सा गाइड</string>
+    <string name="first_aid_search_hint">आपात स्थिति खोजें (उदा: सांप का काटना)</string>
+    <string name="first_aid_what_to_do">क्या करें:</string>
+    <string name="first_aid_call_ambulance">एम्बुलेंस बुलाओ</string>
+    <string name="first_aid_no_results">कोई मेल खाने वाला गाइड नहीं मिला।</string>
+
+    <!-- ==================== History Timeline ==================== -->
+    <string name="history_title">गतिविधि इतिहास</string>
+    <string name="history_filter_all">सभी गतिविधियां</string>
+    <string name="history_filter_chat">चैट प्रश्न</string>
+    <string name="history_filter_vaccine">टीकाकरण</string>
+    <string name="history_filter_symptom">लक्षण जांच</string>
+    <string name="history_no_events">अभी तक कोई गतिविधि दर्ज नहीं की गई है।</string>
+    <string name="menu_history_cd">गतिविधि इतिहास देखें</string>
+
+    <!-- ==================== Vaccine Details Bottom Sheet ==================== -->
+    <string name="vaccine_sheet_title">टीकाकरण विवरण</string>
+    <string name="vaccine_btn_download">प्रमाणपत्र डाउनलोड करें</string>
+    <string name="vaccine_downloading">प्रमाणपत्र पीडीएफ तैयार किया जा रहा है…</string>
+
+    <!-- ==================== History AI Integration ==================== -->
+    <string name="history_btn_ai_summary">स्वास्थ्य सारांश</string>
+    <string name="history_ai_loading">आपके हालिया स्वास्थ्य डेटा का विश्लेषण किया जा रहा है…</string>
+    <string name="history_ai_error">अभी AI सारांश प्राप्त करने में असमर्थ। कृपया अपना कनेक्शन जांचें।</string>
+
+    <!-- ==================== Add Reminder ==================== -->
+    <string name="reminder_title">नया अनुस्मारक</string>
+    <string name="reminder_medicine_name">दवा का नाम</string>
+    <string name="reminder_dosage">खुराक (उदा. 1 गोली)</string>
+    <string name="reminder_select_time">समय चुनें</string>
+    <string name="reminder_freq_once">दिन में एक बार</string>
+    <string name="reminder_freq_twice">दिन में दो बार</string>
+    <string name="reminder_freq_thrice">दिन में तीन बार</string>
+    <string name="reminder_btn_save">अनुस्मारक सहेजें</string>
+    <string name="reminder_error_empty">कृपया सभी फ़ील्ड भरें और समय चुनें।</string>
+
+    <!-- ==================== Notifications ==================== -->
+    <string name="notif_channel_reminders_name">दवा अनुस्मारक</string>
+    <string name="notif_channel_reminders_desc">आपकी निर्धारित दवाओं के लिए अलर्ट।</string>
+    <string name="notif_action_take_now">अभी लें</string>
+
+</resources>

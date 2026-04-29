@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SOS Emergency button background with rounded corners and ripple -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/ripple_emergency">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/accent_emergency" />
+            <corners android:radius="@dimen/sos_button_corner_radius" />
+        </shape>
+    </item>
+</ripple>

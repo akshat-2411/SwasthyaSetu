@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#00796B</color>
+    <color name="primary_dark">#004D40</color>
+    <color name="primary_light">#B2DFDB</color>
+    <color name="primary_surface">#E0F2F1</color>
+    <color name="secondary">#48A999</color>
+    <color name="secondary_dark">#2E7D6E</color>
+    <color name="secondary_light">#80CBC4</color>
+    <color name="accent_emergency">#D32F2F</color>
+    <color name="accent_emergency_dark">#B71C1C</color>
+    <color name="accent_emergency_light">#EF9A9A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background">#F5F5F5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#9E9E9E</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_emergency">#FFFFFF</color>
+    <color name="success_green">#388E3C</color>
+    <color name="warning_amber">#FFA000</color>
+    <color name="info_blue">#1976D2</color>
+    <color name="ripple_primary">#3300796B</color>
+    <color name="ripple_emergency">#33D32F2F</color>
+
+    <!-- ==================== Dashboard Card Tints ==================== -->
+    <color name="card_icon_tint_chat">#00796B</color>
+    <color name="card_icon_tint_hospital">#1976D2</color>
+    <color name="card_icon_tint_vaccine">#388E3C</color>
+    <color name="card_icon_tint_firstaid">#D32F2F</color>
+    <color name="card_icon_tint_symptom">#7B1FA2</color>
+    <color name="card_icon_tint_reminders">#E65100</color>
+
+    <color name="card_bg_chat">#E0F2F1</color>
+    <color name="card_bg_hospital">#E3F2FD</color>
+    <color name="card_bg_vaccine">#E8F5E9</color>
+    <color name="card_bg_firstaid">#FFEBEE</color>
+    <color name="card_bg_symptom">#F3E5F5</color>
+    <color name="card_bg_reminders">#FFF3E0</color>
+
+    <!-- ==================== Shimmer / Loading ==================== -->
+    <color name="shimmer_light">#E0E0E0</color>
+    <color name="shimmer_dark">#BDBDBD</color>
+
+    <!-- ==================== Health Tip Card ==================== -->
+    <color name="card_bg_health_tip">#E0F2F1</color>
+    <color name="alert_tip_bg">#FFEBEE</color>
+
+    <color name="outline">#CCCCCC</color>
+
+</resources>

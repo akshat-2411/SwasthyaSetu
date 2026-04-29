@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Medical Plus Sign -->
+    <path android:pathData="M 10.5 2 H 13.5 V 5 H 16.5 V 8 H 13.5 V 11 H 10.5 V 8 H 7.5 V 5 H 10.5 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="12"
+                android:startY="2"
+                android:endX="12"
+                android:endY="20"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00796B" />
+                <item android:offset="1.0" android:color="#4DB6AC" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Setu/Bridge Arc -->
+    <path android:pathData="M 3 20 C 3 14, 7 12, 12 12 C 17 12, 21 14, 21 20 H 18 C 18 16, 15.5 15, 12 15 C 8.5 15, 6 16, 6 20 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="12"
+                android:startY="2"
+                android:endX="12"
+                android:endY="20"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00796B" />
+                <item android:offset="1.0" android:color="#4DB6AC" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "title": "Snake Bite",
+    "description": "Immediate steps to take if bitten by a venomous snake.",
+    "iconResName": "ic_warning",
+    "steps": [
+      "Keep the person incredibly calm and still. Movement can cause venom to spread faster.",
+      "Call an ambulance (108) immediately.",
+      "Remove tight clothing, rings, or watches near the bite area before swelling begins.",
+      "Wash the bite with soap and water if possible, but do not flush it aggressively.",
+      "Do NOT attempt to cut the wound or suck the venom out.",
+      "Do NOT apply a tourniquet. Instead, apply a loose, sterile bandage over the bite.",
+      "Keep the bitten limb positioned at or slightly below the level of the heart."
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Fracture (Broken Bone)",
+    "description": "How to handle suspected bone fractures to prevent further damage.",
+    "iconResName": "ic_first_aid",
+    "steps": [
+      "Stop any bleeding by applying pressure with a sterile bandage.",
+      "Immobilize the injured area immediately. Do NOT try to realign the bone.",
+      "Apply ice packs to limit swelling and help relieve pain (do not apply ice directly to skin).",
+      "Treat for shock: lay the person flat, elevate legs if appropriate.",
+      "Seek emergency medical help quickly."
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Burns",
+    "description": "First aid for thermal or chemical burns.",
+    "iconResName": "ic_emergency",
+    "steps": [
+      "Remove the person from the heat source to stop the burning.",
+      "Cool the burn by holding it under cool (not ice-cold) running water for 10-15 minutes.",
+      "Remove rings or tight items from the burned area quickly and gently.",
+      "Cover the burn loosely with a sterile, non-fluffy bandage or clean cloth.",
+      "Do NOT break blisters. This introduces the risk of severe infection.",
+      "Seek medical help for major burns or burns larger than three inches."
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Fainting",
+    "description": "What to do if someone loses consciousness briefly.",
+    "iconResName": "ic_lightbulb",
+    "steps": [
+      "Catch the person as they fall if possible, and lay them flat on their back.",
+      "Elevate their legs 12 inches above heart level to restore blood flow to the brain.",
+      "Loosen restrictive collars, belts, and tight clothing.",
+      "Check their airway to ensure they are breathing normally.",
+      "If they don't regain consciousness within 1 minute, call for emergency medical assistance (108).",
+      "Do NOT splash water on their face or force them to drink."
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Choking",
+    "description": "How to clear a blocked airway using the Heimlich maneuver.",
+    "iconResName": "ic_emergency",
+    "steps": [
+      "Ask 'Are you choking?' If they cannot cough or speak, act immediately.",
+      "Stand behind them, wrap your arms around their waist, and lean them slightly forward.",
+      "Make a fist with one hand and place it just above their navel.",
+      "Grasp your fist with the other hand and give 5 quick, upward thrusts.",
+      "Repeat the abdominal thrusts until the object is expelled.",
+      "If the person becomes unconscious, lower them to the ground and begin CPR."
+    ]
+  }
+]
